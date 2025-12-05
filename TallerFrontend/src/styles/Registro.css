@@ -1,0 +1,153 @@
+/* ────────── ESTRUCTURA PRINCIPAL ────────── */
+.auth-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+}
+
+/* ────────── FONDO CON IMAGEN NÍTIDA ────────── */
+.auth-hero::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://speedcafe.b-cdn.net/wp-content/uploads/2025/03/M25_0654_a3_rgb.jpg') no-repeat center center;
+  background-size: cover;
+  z-index: 0;
+}
+
+/* ────────── TARJETA CON MEJOR CONTRASTE ────────── */
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--form-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--detalles-color);
+}
+/* ────────── HEADER ────────── */
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-header h2 {
+  font-size: 1.75rem;
+  color: var(--heading-color);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.auth-header .subtitle {
+  color: var(--text-color);
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* ────────── CAMPOS DEL FORMULARIO ────────── */
+.auth-field {
+  margin-bottom: 1.5rem;
+}
+
+.auth-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.auth-field input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--principal-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.auth-field input:focus {
+  outline: none;
+  border-color: var(--detalles-color);
+  box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.2);
+}
+
+.auth-error {
+  color: #ff4d4d;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  display: block;
+  font-weight: 500;
+}
+
+/* ────────── BOTÓN ────────── */
+.auth-button {
+  width: 100%;
+  padding: 1rem;
+  background: var(--detalles-color);
+  color: var(--principal-color);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.auth-button:hover {
+  background: color-mix(in srgb, var(--detalles-color) 90%, white);
+  transform: translateY(-2px);
+}
+
+/* ────────── PIE DE FORMULARIO ────────── */
+.auth-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.auth-link {
+  color: var(--detalles-color);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* ────────── MODOS Y RESPONSIVE ────────── */
+[tema="oscuro"] .auth-card {
+  background: var(--form-bg);
+  border: 1px solid var(--detalles-color);
+}
+
+@media (min-width: 480px) {
+  .auth-card {
+    padding: 2.5rem;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.auth-card {
+  animation: fadeIn 0.5s ease-out forwards;
+}

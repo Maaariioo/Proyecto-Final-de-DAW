@@ -1,0 +1,69 @@
+:root {
+  --principal-color: rgb(12, 32, 145);
+  --secundario-color: rgb(7, 14, 116);
+  --detalles-color: #00d9ff;
+  --detalles-hover: #00e5ff;
+  --text-color: #333;
+  --heading-color: var(--principal-color);
+  --bg-color: #fff;
+  --form-bg: #f5f5f5;
+  --footer-text: white;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --gradient-primary: linear-gradient(135deg, var(--detalles-color), #0099cc);
+  --gradient-hover: linear-gradient(135deg, #00e5ff, #0077cc);
+  --gradient-header: linear-gradient(135deg, var(--principal-color), var(--secundario-color));
+}
+ 
+[tema="oscuro"] {
+  --principal-color: rgb(20, 30, 80);
+  --secundario-color: rgb(10, 15, 50);
+  --detalles-color: #00a6ff;
+  --detalles-hover: #00b8ff;
+  --text-color: #eee;
+  --heading-color: #87CEFA;
+  --bg-color: #121212;
+  --form-bg: #1e1e1e;
+  --footer-text: #ddd;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --gradient-primary: linear-gradient(135deg, var(--detalles-color), #0077cc);
+  --gradient-hover: linear-gradient(135deg, #00b8ff, #0055aa);
+  --gradient-header: linear-gradient(135deg, var(--principal-color), var(--secundario-color));
+}
+
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overflow-x: hidden;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.8s, color 0.8s;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--detalles-color);
+  color: white;
+}

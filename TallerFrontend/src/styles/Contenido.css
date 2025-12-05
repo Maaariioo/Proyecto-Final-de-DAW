@@ -1,0 +1,8 @@
+.contenido {
+    flex: 1;
+    padding: 1rem;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  

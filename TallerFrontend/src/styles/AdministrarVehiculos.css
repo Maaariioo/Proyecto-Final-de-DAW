@@ -1,0 +1,384 @@
+/* AdministrarVehiculos.css - Versión Corregida con Clases Específicas */
+.admin-vehiculos-container {
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin-top: 40px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.admin-vehiculos-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.admin-vehiculos-header h1 {
+  color: var(--heading-color);
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--heading-color), var(--detalles-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.admin-vehiculos-header p {
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+.admin-vehiculos-pestañas {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--form-bg);
+  padding-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.admin-vehiculos-pestaña {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: var(--form-bg);
+  color: var(--text-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 0.95rem;
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+}
+
+.admin-vehiculos-pestaña-activa {
+  background: var(--principal-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(12, 32, 145, 0.3);
+}
+
+.admin-vehiculos-pestaña:hover:not(.admin-vehiculos-pestaña-activa) {
+  background: var(--detalles-color);
+  color: var(--bg-color);
+  transform: translateY(-1px);
+}
+
+.admin-vehiculos-pestaña-contenido {
+  background: var(--form-bg);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(12, 32, 145, 0.1);
+}
+
+.admin-vehiculos-formulario-agregar {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--principal-color);
+}
+
+.admin-vehiculos-formulario-agregar h3 {
+  color: var(--heading-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.admin-vehiculos-form-campos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-vehiculos-form-campos input,
+.admin-vehiculos-form-campos select {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--principal-color);
+  border-radius: 8px;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.admin-vehiculos-form-campos input:focus,
+.admin-vehiculos-form-campos select:focus {
+  outline: none;
+  border-color: var(--detalles-color);
+  box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.admin-vehiculos-form-acciones {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+}
+
+.admin-vehiculos-btn-agregar {
+  background: var(--principal-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  min-width: 150px;
+}
+
+.admin-vehiculos-btn-agregar:hover {
+  background: var(--secundario-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(12, 32, 145, 0.3);
+}
+
+.admin-vehiculos-lista-items h3 {
+  color: var(--heading-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.admin-vehiculos-sin-datos {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: var(--text-color);
+  opacity: 0.6;
+  font-style: italic;
+  font-size: 1.1rem;
+  background: var(--bg-color);
+  border-radius: 8px;
+  border: 2px dashed var(--principal-color);
+}
+
+.admin-vehiculos-item-tarjeta {
+  background: var(--bg-color);
+  border: 1px solid var(--principal-color);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.admin-vehiculos-item-tarjeta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  border-color: var(--detalles-color);
+}
+
+.admin-vehiculos-item-info h4 {
+  margin: 0 0 0.75rem 0;
+  color: var(--heading-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.admin-vehiculos-item-info p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+  opacity: 0.8;
+  line-height: 1.4;
+}
+
+.admin-vehiculos-item-acciones {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.admin-vehiculos-btn-editar {
+  background: var(--detalles-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  min-width: 80px;
+}
+
+.admin-vehiculos-btn-editar:hover {
+  background: #00a6ff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 217, 255, 0.3);
+}
+
+.admin-vehiculos-btn-eliminar {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  min-width: 80px;
+}
+
+.admin-vehiculos-btn-eliminar:hover {
+  background: #c82333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+.admin-vehiculos-cargando {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.admin-vehiculos-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--form-bg);
+  border-top: 4px solid var(--detalles-color);
+  border-radius: 50%;
+  animation: admin-vehiculos-spin 1s linear infinite;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes admin-vehiculos-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.admin-vehiculos-cargando p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .admin-vehiculos-container {
+    padding: 1.5rem;
+  }
+  
+  .admin-vehiculos-form-campos {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-vehiculos-container {
+    padding: 1rem;
+    margin-top: 20px;
+  }
+
+  .admin-vehiculos-header h1 {
+    font-size: 2rem;
+  }
+
+  .admin-vehiculos-pestañas {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .admin-vehiculos-pestaña {
+    min-width: 100%;
+  }
+
+  .admin-vehiculos-pestaña-contenido {
+    padding: 1.5rem;
+  }
+
+  .admin-vehiculos-form-campos {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .admin-vehiculos-form-acciones {
+    justify-content: center;
+  }
+
+  .admin-vehiculos-item-tarjeta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.25rem;
+  }
+
+  .admin-vehiculos-item-acciones {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-vehiculos-container {
+    padding: 0.75rem;
+  }
+
+  .admin-vehiculos-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .admin-vehiculos-header p {
+    font-size: 1rem;
+  }
+
+  .admin-vehiculos-pestaña-contenido {
+    padding: 1rem;
+  }
+
+  .admin-vehiculos-formulario-agregar h3,
+  .admin-vehiculos-lista-items h3 {
+    font-size: 1.2rem;
+  }
+
+  .admin-vehiculos-item-info h4 {
+    font-size: 1.1rem;
+  }
+
+  .admin-vehiculos-btn-agregar {
+    min-width: 120px;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .admin-vehiculos-btn-editar,
+  .admin-vehiculos-btn-eliminar {
+    min-width: 70px;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Modo oscuro específico */
+[tema="oscuro"] .admin-vehiculos-item-tarjeta {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[tema="oscuro"] .admin-vehiculos-pestaña-contenido {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[tema="oscuro"] .admin-vehiculos-formulario-agregar {
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+[tema="oscuro"] .admin-vehiculos-pestañas {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}

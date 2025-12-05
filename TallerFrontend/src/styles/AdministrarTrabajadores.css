@@ -1,0 +1,334 @@
+.administrar-trabajadores-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.titulo-administrar {
+  text-align: center;
+  color: var(--heading-color);
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.trabajadores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.tarjeta-trabajador {
+  background: var(--form-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--principal-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-trabajador:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.info-trabajador {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.info-trabajador h3 {
+  color: var(--heading-color);
+  margin: 0 0 0.5rem 0;
+  font-size: 1.4rem;
+  border-bottom: 2px solid var(--detalles-color);
+  padding-bottom: 0.5rem;
+}
+
+.correo-trabajador {
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.rol-trabajador {
+  color: var(--detalles-color);
+  font-weight: bold;
+  margin: 0.5rem 0;
+  padding: 0.3rem 0.8rem;
+  background: var(--principal-color);
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 0.85rem;
+}
+
+.especialidad-trabajador {
+  color: var(--text-color);
+  opacity: 0.9;
+  font-style: italic;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background: rgba(0, 217, 255, 0.1);
+  border-radius: 6px;
+  border-left: 3px solid var(--detalles-color);
+}
+
+.telefono-trabajador {
+  color: var(--text-color);
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.fecha-contratacion {
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 0.85rem;
+  margin: 0.5rem 0;
+}
+
+.estado-trabajador {
+  font-weight: bold;
+  margin: 0.5rem 0;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 0.85rem;
+}
+
+.estado-trabajador.activo {
+  background: rgba(40, 167, 69, 0.2);
+  color: #28a745;
+  border: 1px solid #28a745;
+}
+
+.estado-trabajador.inactivo {
+  background: rgba(220, 53, 69, 0.2);
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}
+
+.botones-trabajador {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: auto;
+}
+
+.boton-borrar,
+.boton-editar {
+  flex: 1;
+}
+
+.boton-borrar button,
+.boton-editar button {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.boton-borrar button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.boton-borrar button:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
+
+.boton-editar button {
+  background-color: var(--principal-color);
+  color: white;
+}
+
+.boton-editar button:hover {
+  background-color: var(--secundario-color);
+  transform: scale(1.05);
+}
+
+.boton-añadir-trabajador {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.boton-añadir {
+  background: linear-gradient(135deg, var(--principal-color), var(--secundario-color));
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.boton-añadir:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, var(--secundario-color), var(--principal-color));
+}
+
+/* CONTENEDORES MODALES - CORREGIDOS */
+.modal-añadir-trabajador-container,
+.formulario-editar-trabajador-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(5px);
+}
+
+/* CONTENEDOR ESPECÍFICO PARA EL FORMULARIO DE EDITAR */
+.formulario-editar-trabajador-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CONTENEDOR ESPECÍFICO PARA EL FORMULARIO DE AÑADIR */
+.modal-añadir-trabajador-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cerrar-modal-añadir,
+.cerrar-formulario-editar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+
+.cerrar-modal-añadir:hover,
+.cerrar-formulario-editar:hover {
+  background: #c82333;
+  transform: scale(1.1);
+}
+
+.sin-trabajadores {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-color);
+  opacity: 0.7;
+  font-style: italic;
+  font-size: 1.1rem;
+  background: var(--form-bg);
+  border-radius: 12px;
+  border: 2px dashed var(--principal-color);
+}
+
+/* Estados de carga y error */
+.cargando, .error-carga {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-color);
+  font-size: 1.1rem;
+  margin: 50px auto;
+}
+
+.error-carga {
+  background: rgba(220, 53, 69, 0.1);
+  border: 1px solid #dc3545;
+  border-radius: 8px;
+}
+
+.boton-reintentar {
+  background: var(--principal-color);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.boton-reintentar:hover {
+  background: var(--secundario-color);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .administrar-trabajadores-container {
+    padding: 1rem;
+  }
+  
+  .trabajadores-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .botones-trabajador {
+    flex-direction: column;
+  }
+  
+  .titulo-administrar {
+    font-size: 2rem;
+  }
+  
+  .tarjeta-trabajador {
+    padding: 1rem;
+  }
+  
+  .modal-añadir-trabajador-container,
+  .formulario-editar-trabajador-container {
+    padding: 1rem;
+  }
+  
+  .cerrar-modal-añadir,
+  .cerrar-formulario-editar {
+    top: 15px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .administrar-trabajadores-container {
+    padding: 0.5rem;
+  }
+  
+  .titulo-administrar {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .boton-añadir {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .modal-añadir-trabajador-container,
+  .formulario-editar-trabajador-container {
+    padding: 0.5rem;
+  }
+}

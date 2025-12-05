@@ -1,0 +1,304 @@
+.contenedor-formulario-editar-trabajador {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.formulario-editar-trabajador {
+  background: var(--form-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border: 3px solid var(--detalles-color);
+  width: 100%;
+  max-width: 450px;
+  max-height: 85vh;
+  overflow-y: auto;
+  animation: aparecer-formulario-editar 0.3s ease-out;
+  box-sizing: border-box;
+}
+
+@keyframes aparecer-formulario-editar {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.titulo-formulario-editar-trabajador {
+  color: var(--heading-color);
+  text-align: center;
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+  border-bottom: 2px solid var(--detalles-color);
+  padding-bottom: 0.5rem;
+}
+
+.form-editar-trabajador {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.campo-formulario-editar-trabajador {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.label-formulario-editar-trabajador {
+  font-weight: bold;
+  color: var(--heading-color);
+  font-size: 0.85rem;
+}
+
+.input-editar-trabajador {
+  width: 100%;
+  padding: 0.5rem 0.7rem;
+  border: 2px solid var(--principal-color);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.input-editar-trabajador:focus {
+  outline: none;
+  border-color: var(--detalles-color);
+  box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.2);
+}
+
+.input-editar-trabajador::placeholder {
+  color: var(--text-color);
+  opacity: 0.6;
+}
+
+.campo-checkbox-editar-trabajador {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem;
+  background: rgba(0, 217, 255, 0.1);
+  border-radius: 6px;
+  border: 1px solid var(--detalles-color);
+  margin: 0.3rem 0;
+}
+
+.label-checkbox-editar-trabajador {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  font-weight: normal;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 0.85rem;
+  gap: 0.5rem;
+}
+
+.checkbox-editar-trabajador {
+  transform: scale(1);
+  accent-color: var(--detalles-color);
+  cursor: pointer;
+}
+
+.contenedor-botones-editar-trabajador {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.boton-guardar-cambios-trabajador {
+  background: linear-gradient(135deg, var(--principal-color), var(--secundario-color));
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: bold;
+  flex: 1;
+  transition: all 0.3s ease;
+  min-width: 110px;
+}
+
+.boton-guardar-cambios-trabajador:hover {
+  background: linear-gradient(135deg, var(--secundario-color), var(--principal-color));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.boton-cancelar-editar-trabajador {
+  background: #6c757d;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: bold;
+  flex: 1;
+  transition: all 0.3s ease;
+  min-width: 110px;
+}
+
+.boton-cancelar-editar-trabajador:hover {
+  background: #5a6268;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Scrollbar personalizado para el formulario */
+.formulario-editar-trabajador::-webkit-scrollbar {
+  width: 6px;
+}
+
+.formulario-editar-trabajador::-webkit-scrollbar-track {
+  background: var(--form-bg);
+  border-radius: 3px;
+}
+
+.formulario-editar-trabajador::-webkit-scrollbar-thumb {
+  background: var(--principal-color);
+  border-radius: 3px;
+}
+
+.formulario-editar-trabajador::-webkit-scrollbar-thumb:hover {
+  background: var(--secundario-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contenedor-formulario-editar-trabajador {
+    padding: 0.8rem;
+  }
+  
+  .formulario-editar-trabajador {
+    padding: 1.2rem;
+    max-width: 400px;
+    max-height: 80vh;
+  }
+  
+  .titulo-formulario-editar-trabajador {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .form-editar-trabajador {
+    gap: 0.7rem;
+  }
+  
+  .contenedor-botones-editar-trabajador {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  
+  .boton-guardar-cambios-trabajador,
+  .boton-cancelar-editar-trabajador {
+    flex: none;
+    width: 100%;
+    padding: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor-formulario-editar-trabajador {
+    padding: 0.5rem;
+  }
+  
+  .formulario-editar-trabajador {
+    padding: 1rem;
+    max-width: 350px;
+    max-height: 85vh;
+  }
+  
+  .titulo-formulario-editar-trabajador {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .form-editar-trabajador {
+    gap: 0.6rem;
+  }
+  
+  .input-editar-trabajador {
+    padding: 0.45rem 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  .label-formulario-editar-trabajador {
+    font-size: 0.8rem;
+  }
+  
+  .campo-checkbox-editar-trabajador {
+    padding: 0.5rem;
+  }
+  
+  .label-checkbox-editar-trabajador {
+    font-size: 0.8rem;
+  }
+  
+  .boton-guardar-cambios-trabajador,
+  .boton-cancelar-editar-trabajador {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-height: 600px) {
+  .formulario-editar-trabajador {
+    max-height: 90vh;
+    padding: 1rem;
+  }
+  
+  .form-editar-trabajador {
+    gap: 0.5rem;
+  }
+  
+  .campo-formulario-editar-trabajador {
+    gap: 0.2rem;
+  }
+  
+  .campo-checkbox-editar-trabajador {
+    margin: 0.2rem 0;
+    padding: 0.4rem;
+  }
+  
+  .contenedor-botones-editar-trabajador {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-height: 500px) {
+  .formulario-editar-trabajador {
+    max-height: 95vh;
+    padding: 0.8rem;
+  }
+  
+  .titulo-formulario-editar-trabajador {
+    margin-bottom: 0.6rem;
+    font-size: 1.1rem;
+  }
+  
+  .input-editar-trabajador {
+    padding: 0.4rem 0.5rem;
+  }
+  
+  .campo-checkbox-editar-trabajador {
+    padding: 0.3rem;
+  }
+}

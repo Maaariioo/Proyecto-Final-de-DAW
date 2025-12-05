@@ -1,0 +1,162 @@
+.seccion-inicio {
+    margin: 20px auto;
+    padding: 0 20px;
+}
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('https://almacenf1.wordpress.com/wp-content/uploads/2022/06/dsc_0892-min.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    border-radius: 0; /* Cambiado de 8px a 0 para esquinas rectas */
+    margin: -20px -20px 40px -20px; /* Margen negativo para compensar el padding del contenedor */
+    padding: 40px 20px; /* Ajusta según necesites */
+    position: relative;
+    overflow: hidden;
+    width: calc(100% + 40px);
+    height: 55vh; /* Altura completa de la ventana */
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-top: 150px;
+    position: relative;
+    
+}
+
+.hero p {
+    margin-top: -30px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    transition: color 0.3s ease;
+  }
+  
+  .hero strong {
+    color: var(--detalles-color);
+    transition: color 0.3s ease;
+  }
+
+.hero a{
+
+    text-decoration: none;
+    color: var(--detalles-color);
+    font-weight: bold;
+    transition: 0.3s;
+    transform: translateY(-2px);
+    border: 2px solid var(--detalles-color);
+    padding: 10px 20px;
+    border-radius: 50px;
+}
+
+.hero a:hover {
+
+    background-color: rgb(201, 246, 252);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 217, 255, 0.3);
+    color: rgb(41, 37, 250);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    position: relative;
+}
+.tarjetas-destacadas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.tarjeta {
+  background-color: var(--form-bg);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Cambiado de 600px fijo */
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.tarjeta:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.icono-tarjeta {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.tarjeta h3 {
+  color: var(--heading-color);
+  margin-bottom: 15px;
+}
+
+.tarjeta p {
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.cliente {
+  font-weight: bold;
+  color: var(--principal-color);
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .seccion-inicio {
+    padding: 0 15px;
+  }
+  
+  .hero {
+    margin: -15px -15px 30px -15px;
+    width: calc(100% + 30px);
+    padding: 30px 15px;
+    min-height: 350px;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+  }
+  
+  .tarjetas-destacadas {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .tarjeta {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .tarjetas-destacadas {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .tarjeta {
+    padding: 15px;
+  }
+  
+  .icono-tarjeta {
+    font-size: 2rem;
+  }
+}

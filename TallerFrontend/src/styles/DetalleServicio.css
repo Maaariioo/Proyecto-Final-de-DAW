@@ -1,0 +1,207 @@
+/* DetalleServicio.css - Versión Compacta */
+.detalle-servicio {
+  background: var(--bg-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+[tema="oscuro"] .detalle-servicio {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Estado de selección */
+.selecciona-servicio {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-color);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.selecciona-servicio p {
+  font-size: 1rem;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.icono-seleccion {
+  font-size: 2rem;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+/* Header del Servicio Compacto */
+.servicio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[tema="oscuro"] .servicio-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.servicio-titulo {
+  font-size: 1.5rem;
+  color: var(--heading-color);
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.servicio-precio {
+  background: linear-gradient(135deg, var(--detalles-color), #0099cc);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 217, 255, 0.3);
+}
+
+/* Imagen del Servicio Compacta */
+.servicio-imagen-container {
+  max-width: 100%;
+  margin: 0 auto 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+[tema="oscuro"] .servicio-imagen-container {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.servicio-imagen {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Información del Servicio Compacta */
+.servicio-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.servicio-descripcion h3,
+.servicio-caracteristicas h3 {
+  font-size: 1.1rem;
+  color: var(--heading-color);
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--detalles-color);
+  font-weight: 600;
+}
+
+.servicio-descripcion p {
+  line-height: 1.5;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Características Compactas */
+.servicio-caracteristicas ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.servicio-caracteristicas li {
+  display: flex;
+  align-items: flex-start;
+  color: var(--text-color);
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+.check-icon {
+  margin-right: 8px;
+  font-weight: bold;
+  color: var(--detalles-color);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Responsive Compacto */
+@media (max-width: 768px) {
+  .detalle-servicio {
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .servicio-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+
+  .servicio-precio {
+    align-self: flex-end;
+  }
+
+  .servicio-titulo {
+    font-size: 1.3rem;
+  }
+
+  .servicio-info {
+    gap: 15px;
+  }
+
+  .servicio-imagen {
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .detalle-servicio {
+    padding: 12px;
+  }
+
+  .servicio-titulo {
+    font-size: 1.2rem;
+  }
+
+  .servicio-precio {
+    font-size: 1.1rem;
+    padding: 6px 12px;
+  }
+
+  .servicio-descripcion h3,
+  .servicio-caracteristicas h3 {
+    font-size: 1rem;
+  }
+
+  .servicio-descripcion p {
+    font-size: 0.85rem;
+  }
+
+  .servicio-caracteristicas li {
+    font-size: 0.8rem;
+  }
+
+  .servicio-imagen {
+    max-height: 180px;
+  }
+}

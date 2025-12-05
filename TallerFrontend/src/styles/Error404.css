@@ -1,0 +1,149 @@
+.error-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), 
+                url('https://www.formula1.com/content/dam/fom-website/manual/Misc/2020/2020races/AbuDhabi/GettyImages-1003844546.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.error-card {
+    background: var(--detalles-color);
+    border-radius: 16px;
+    padding: 3px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.error-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(0, 217, 255, 0) 0%,
+        rgba(0, 217, 255, 0) 30%,
+        rgba(0, 217, 255, 0.3) 45%,
+        rgba(0, 217, 255, 0) 60%,
+        rgba(0, 217, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    animation: shine 6s infinite;
+}
+
+.error-content {
+    background: var(--principal-color);
+    border-radius: 14px;
+    padding: 50px 40px;
+    position: relative;
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+
+.error-content h1 {
+    font-size: 5rem;
+    margin: 0;
+    color: var(--detalles-color);
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.error-divider {
+    height: 3px;
+    width: 80px;
+    background: var(--detalles-color);
+    margin: 20px auto;
+    border-radius: 3px;
+}
+
+.error-content h2 {
+    font-size: 1.8rem;
+    margin: 0 0 15px;
+    color: white;
+    font-weight: 500;
+}
+
+.error-content p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.error-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--detalles-color);
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 12px 25px;
+    border: 2px solid var(--detalles-color);
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.error-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(0, 217, 255, 0.2), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+}
+
+.error-link:hover {
+    background-color: rgba(0, 217, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 217, 255, 0.3);
+}
+
+.error-link:hover::before {
+    transform: translateX(100%);
+}
+
+.error-link svg {
+    transition: transform 0.3s;
+}
+
+.error-link:hover svg {
+    transform: translateX(3px);
+}
+
+@keyframes shine {
+    0% { transform: rotate(30deg) translate(-30%, -30%); }
+    100% { transform: rotate(30deg) translate(30%, 30%); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .error-content {
+        padding: 40px 30px;
+    }
+    
+    .error-content h1 {
+        font-size: 4rem;
+    }
+    
+    .error-content h2 {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,896 @@
+.fullscreen-form-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.form-background {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.form-content {
+  flex: 1;
+  padding: 20px;
+  background: var(--bg-color);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.form-image {
+  width: 45%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+              url('https://dirtfish-editorial.s3-accelerate.amazonaws.com/2020/12/000210S-Gronholm_mkl_204.jpg') no-repeat center center;
+  background-size: cover;
+  color: var(--footer-text);
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+  position: relative;
+}
+
+.image-overlay {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  text-align: center;
+}
+
+.image-overlay h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: var(--detalles-color);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.image-overlay p {
+  font-size: 1.1rem;
+  margin-top: 25px;
+  line-height: 1.5;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+}
+
+.feature-item i {
+  color: var(--detalles-color);
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.feature-item span {
+  font-size: 0.95rem;
+}
+
+#formularioCita {
+  max-width: 700px;
+  margin: 60px auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.form-header {
+  margin-bottom: 30px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.form-header h2 {
+  font-size: 1.8rem;
+  color: var(--heading-color);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.form-subtitle {
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.form-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.form-section {
+  background: var(--form-bg);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid var(--detalles-color);
+  flex-shrink: 0;
+}
+
+.form-section h3 {
+  color: var(--detalles-color);
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  padding-bottom: 6px;
+  display: inline-block;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 14px;
+  border: 2px solid var(--principal-color);
+  border-radius: 6px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--detalles-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.2);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.half-width {
+  flex: 1;
+}
+
+.form-footer {
+  margin-top: 30px;
+  text-align: center;
+  flex-shrink: 0;
+  position: sticky;
+  bottom: 0;
+  background: var(--bg-color);
+  padding: 15px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form-footer button {
+  background: var(--principal-color);
+  color: white;
+  border: none;
+  padding: 16px 35px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(12, 32, 145, 0.3);
+  width: 100%;
+  max-width: 300px;
+  justify-content: center;
+  min-height: 54px;
+}
+
+.form-footer button:hover {
+  background: var(--secundario-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(12, 32, 145, 0.4);
+}
+
+.icon-arrow {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(45deg);
+}
+
+.form-assurance {
+  margin-top: 15px;
+  color: var(--text-color);
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.icon-check {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: var(--detalles-color);
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") no-repeat center;
+}
+
+.icon-tool,
+.icon-certificate,
+.icon-warranty {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background-color: var(--detalles-color);
+}
+
+.icon-tool {
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M21.71 20.29L20.29 21.71A1 1 0 0 1 18.92 21.6L18 20.5A13 13 0 0 1 3.5 6L2.4 5.08A1 1 0 0 1 2.29 3.7L3.71 2.29A1 1 0 0 1 5.05 2.38L6.23 3.56A1 1 0 0 1 6.22 5L5.5 5.71A11 11 0 0 0 18.29 18.5L19 17.78A1 1 0 0 1 20.44 17.77L21.62 18.95A1 1 0 0 1 21.71 20.29z'/%3E%3C/svg%3E") no-repeat center;
+}
+
+.icon-certificate {
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H5zm6 6V7h2v4h4v2h-4v4h-2v-4H7v-2h4z'/%3E%3C/svg%3E") no-repeat center;
+}
+
+.icon-warranty {
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11V11.99z'/%3E%3C/svg%3E") no-repeat center;
+}
+
+.errores {
+  color: #d32f2f;
+  background-color: #ffcdd4;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-top: 5px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+  background-color: #f5f5f5;
+  color: #999;
+  cursor: not-allowed;
+  opacity: 0.7;
+  border-color: #ddd;
+}
+
+/* Estilos para el sistema de pago */
+.payment-banner {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.payment-info h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+}
+
+.payment-info p {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+.deposit-info {
+  text-align: center;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.deposit-badge {
+  display: inline-block;
+  background: var(--principal-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.deposit-info small {
+  color: #6c757d;
+  font-size: 0.8rem;
+}
+
+.paypal-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.paypal-section h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.paypal-container {
+  max-width: 400px;
+  margin: 0 auto 1.5rem;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+.payment-alternatives {
+  margin-top: 20px;
+  padding: 15px;
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.test-cards {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.test-cards p {
+  margin: 5px 0;
+  font-family: monospace;
+}
+
+.btn-cancel-payment {
+  display: block;
+  margin: 0 auto;
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-cancel-payment:hover {
+  background: #5a6268;
+}
+
+.success-container {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 90px;
+}
+
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.success-container h2 {
+  color: #28a745;
+  margin-bottom: 1rem;
+}
+
+.success-container p {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.appointment-summary {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.appointment-summary h4 {
+  margin: 0 0 1rem 0;
+  color: #333;
+}
+
+.appointment-summary p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.btn-new-appointment {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-new-appointment:hover {
+  background: #0056b3;
+}
+
+.btn-disabled {
+  opacity: 0.6;
+  cursor: not-allowed !important;
+}
+
+.btn-disabled:hover {
+  transform: none !important;
+}
+
+/* Loading states */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  color: white;
+}
+
+.loading-spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.form-group input:invalid {
+  border-color: #e74c3c;
+}
+
+.form-group input:valid {
+  border-color: #2ecc71;
+}
+
+.payment-security {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  text-align: center;
+  border-left: 4px solid #28a745;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .form-image {
+    width: 40%;
+  }
+  
+  .image-overlay h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .form-image {
+    display: none;
+  }
+  
+  .form-content {
+    padding: 20px 15px;
+  }
+  
+  #formularioCita {
+    margin: 40px auto;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .fullscreen-form-container {
+    min-height: auto;
+  }
+  
+  .form-background {
+    min-height: auto;
+  }
+  
+  .form-content {
+    padding: 15px 10px;
+    min-height: calc(100vh - 80px);
+  }
+  
+  #formularioCita {
+    margin: 20px auto;
+    min-height: 0;
+  }
+  
+  .form-header {
+    margin-bottom: 20px;
+    padding-top: 10px;
+  }
+  
+  .form-header h2 {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    word-wrap: break-word;
+  }
+  
+  .form-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.3;
+  }
+  
+  .form-section {
+    padding: 15px;
+  }
+  
+  .form-section h3 {
+    font-size: 1.1rem;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .half-width {
+    width: 100%;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 12px;
+    font-size: 16px;
+  }
+  
+  .form-footer {
+    margin-top: 20px;
+    padding: 10px 0;
+    position: relative;
+  }
+  
+  .form-footer button {
+    padding: 14px 25px;
+    font-size: 0.95rem;
+    max-width: 100%;
+    min-height: 50px;
+  }
+  
+  .features-list {
+    gap: 15px;
+  }
+  
+  .feature-item {
+    justify-content: flex-start;
+  }
+  
+  .feature-item span {
+    font-size: 0.9rem;
+  }
+  
+  /* PayPal responsive */
+  .payment-banner {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .paypal-section {
+    padding: 1.5rem;
+  }
+  
+  .paypal-container {
+    min-height: 150px;
+  }
+  
+  .success-container {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-content {
+    padding: 10px 8px;
+    min-height: calc(100vh - 70px);
+  }
+  
+  .form-header {
+    margin-bottom: 15px;
+    padding-top: 5px;
+  }
+  
+  .form-header h2 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+  
+  .form-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .form-sections {
+    gap: 15px;
+  }
+  
+  .form-section {
+    padding: 12px 10px;
+  }
+  
+  .form-group {
+    margin-bottom: 12px;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 10px;
+  }
+  
+  .form-footer {
+    margin-top: 15px;
+    padding: 8px 0;
+  }
+  
+  .form-footer button {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    min-height: 46px;
+  }
+  
+  .form-assurance {
+    font-size: 0.85rem;
+    margin-top: 10px;
+  }
+}
+
+/* Para pantallas MUY pequeñas (menos de 360px) */
+@media (max-width: 359px) {
+  .form-content {
+    padding: 8px 5px;
+  }
+  
+  .form-header h2 {
+    font-size: 1.3rem;
+  }
+  
+  .form-subtitle {
+    font-size: 0.85rem;
+  }
+  
+  .form-section {
+    padding: 10px 8px;
+  }
+  
+  .form-footer button {
+    padding: 10px 15px;
+    font-size: 0.85rem;
+    min-height: 44px;
+  }
+  
+  .form-assurance {
+    font-size: 0.8rem;
+  }
+}
+
+/* Mejoras para inputs en móviles */
+@media (max-width: 768px) {
+  input[type="date"],
+  select {
+    height: 48px;
+  }
+  
+  textarea {
+    min-height: 120px;
+  }
+}
+
+/* Scroll suave para el formulario en móviles */
+.form-sections {
+  scroll-behavior: smooth;
+}
+
+/* Asegurar que el botón siempre sea visible */
+.form-footer {
+  z-index: 10;
+}
+/* Estilos específicos para PayPal */
+.paypal-loading {
+  text-align: center;
+  padding: 20px;
+}
+
+.paypal-loading .loading-spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #0070ba;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 10px;
+}
+
+.paypal-loading p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Asegurar que el contenedor de PayPal tenga el tamaño correcto */
+.paypal-container {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  background: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el botón de PayPal */
+.paypal-buttons {
+  width: 100%;
+}
+
+/* Responsive para PayPal */
+@media (max-width: 768px) {
+  .paypal-container {
+    min-height: 150px;
+    padding: 15px;
+  }
+}
+
+/* Estilos para la validación de fin de semana */
+.error-weekend {
+  border-color: #dc3545 !important;
+  background-color: #fff5f5 !important;
+}
+
+.weekend-error {
+  color: #dc3545 !important;
+  font-weight: bold;
+  background-color: #ffe6e6;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border-left: 4px solid #dc3545;
+}
+
+.weekend-warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.date-info {
+  color: #28a745;
+  font-size: 0.85em;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.loading-info {
+  color: #17a2b8;
+  font-size: 0.85em;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.no-availability {
+  color: #dc3545;
+  font-size: 0.85em;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+/* Mejora los estilos de error existentes */
+.errores {
+  color: #dc3545;
+  font-size: 0.85em;
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: #f8d7da;
+  border-radius: 4px;
+  border-left: 3px solid #dc3545;
+}
+
+/* Deshabilitar botón para fines de semana */
+.btn-disabled {
+  background-color: #6c757d !important;
+  cursor: not-allowed !important;
+  opacity: 0.6 !important;
+}
+
+.btn-disabled:hover {
+  background-color: #6c757d !important;
+  transform: none !important;
+}
+/* Estilos para la información de festivos */
+.date-success {
+  color: #28a745;
+  font-weight: 500;
+}
+
+.date-error {
+  color: #dc3545;
+  font-weight: 500;
+}
+
+.date-info {
+  font-size: 0.85em;
+  margin-top: 5px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+}
+
+.date-success {
+  background-color: #d4edda;
+  border-left: 3px solid #28a745;
+}
+
+.date-error {
+  background-color: #f8d7da;
+  border-left: 3px solid #dc3545;
+}
